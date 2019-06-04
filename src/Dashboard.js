@@ -11,6 +11,8 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
+import { CTX } from "./Store";
+
 const useStyles = makeStyles(theme => {
   return {
     root: {
@@ -43,8 +45,10 @@ const useStyles = makeStyles(theme => {
 
 const Dashboard = props => {
   const classes = useStyles();
-
   const [textValue, changeTextValue] = React.useState("");
+  const [allChats] = React.useContext(CTX);
+
+  console.log(allChats);
 
   return (
     <section>

@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
 import Dashboard from "./Dashboard";
+import Store from "./Store";
 
-function App() {
+const App = props => {
   return (
     <main className="App">
-      <Dashboard />
+      <Store>
+        <Dashboard />
+      </Store>
     </main>
   );
-}
+};
 
 export default App;
